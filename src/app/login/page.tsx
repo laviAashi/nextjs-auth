@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
+import { Toaster } from '../../../node_modules/react-hot-toast/dist/index';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -64,6 +65,7 @@ export default function LoginPage() {
       >
          {buttonDisabled ? 'No Login' : 'Login'}
       </button>
+      <Toaster/>
       <Link href="/signup">Visit Signup Page</Link>
     </div>
   );
